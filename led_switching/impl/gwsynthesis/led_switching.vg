@@ -1,0 +1,132 @@
+//
+//Written by GowinSynthesis
+//Product Version "V1.9.8.11"
+//Wed May 17 15:33:38 2023
+
+//Source file index table:
+//file0 "\C:/Users/franco/Documents/led_switching/src/led_switching.v"
+`timescale 100 ps/100 ps
+module led_sw (
+  LED,
+  SW
+)
+;
+output [7:0] LED;
+input [9:0] SW;
+wire LED_d_7_5;
+wire LED_d_6_4;
+wire LED_d_5_4;
+wire LED_d_4_4;
+wire LED_d_3_4;
+wire LED_d_2_4;
+wire LED_d_1_4;
+wire LED_d_0_4;
+wire [7:0] SW_d;
+wire VCC;
+wire GND;
+  IBUF SW_0_ibuf (
+    .O(SW_d[0]),
+    .I(SW[0]) 
+);
+  IBUF SW_1_ibuf (
+    .O(SW_d[1]),
+    .I(SW[1]) 
+);
+  IBUF SW_2_ibuf (
+    .O(SW_d[2]),
+    .I(SW[2]) 
+);
+  IBUF SW_3_ibuf (
+    .O(SW_d[3]),
+    .I(SW[3]) 
+);
+  IBUF SW_4_ibuf (
+    .O(SW_d[4]),
+    .I(SW[4]) 
+);
+  IBUF SW_5_ibuf (
+    .O(SW_d[5]),
+    .I(SW[5]) 
+);
+  IBUF SW_6_ibuf (
+    .O(SW_d[6]),
+    .I(SW[6]) 
+);
+  IBUF SW_7_ibuf (
+    .O(SW_d[7]),
+    .I(SW[7]) 
+);
+  OBUF LED_0_obuf (
+    .O(LED[0]),
+    .I(LED_d_0_4) 
+);
+  OBUF LED_1_obuf (
+    .O(LED[1]),
+    .I(LED_d_1_4) 
+);
+  OBUF LED_2_obuf (
+    .O(LED[2]),
+    .I(LED_d_2_4) 
+);
+  OBUF LED_3_obuf (
+    .O(LED[3]),
+    .I(LED_d_3_4) 
+);
+  OBUF LED_4_obuf (
+    .O(LED[4]),
+    .I(LED_d_4_4) 
+);
+  OBUF LED_5_obuf (
+    .O(LED[5]),
+    .I(LED_d_5_4) 
+);
+  OBUF LED_6_obuf (
+    .O(LED[6]),
+    .I(LED_d_6_4) 
+);
+  OBUF LED_7_obuf (
+    .O(LED[7]),
+    .I(LED_d_7_5) 
+);
+  INV LED_d_7_s0 (
+    .O(LED_d_7_5),
+    .I(SW_d[7]) 
+);
+  INV LED_d_6_s0 (
+    .O(LED_d_6_4),
+    .I(SW_d[6]) 
+);
+  INV LED_d_5_s0 (
+    .O(LED_d_5_4),
+    .I(SW_d[5]) 
+);
+  INV LED_d_4_s0 (
+    .O(LED_d_4_4),
+    .I(SW_d[4]) 
+);
+  INV LED_d_3_s0 (
+    .O(LED_d_3_4),
+    .I(SW_d[3]) 
+);
+  INV LED_d_2_s0 (
+    .O(LED_d_2_4),
+    .I(SW_d[2]) 
+);
+  INV LED_d_1_s0 (
+    .O(LED_d_1_4),
+    .I(SW_d[1]) 
+);
+  INV LED_d_0_s0 (
+    .O(LED_d_0_4),
+    .I(SW_d[0]) 
+);
+  VCC VCC_cZ (
+    .V(VCC)
+);
+  GND GND_cZ (
+    .G(GND)
+);
+  GSR GSR (
+    .GSRI(VCC) 
+);
+endmodule /* led_sw */

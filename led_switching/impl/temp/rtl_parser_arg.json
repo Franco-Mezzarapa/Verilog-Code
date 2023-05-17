@@ -1,0 +1,16 @@
+{
+ "Files" : [
+  {
+   "Path" : "C:/Users/franco/Documents/led_switching/src/led_switching.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "C:/Users/franco/Documents/led_switching/impl/temp/rtl_parser.result",
+ "Top" : "",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}
